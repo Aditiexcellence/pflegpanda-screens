@@ -3,15 +3,15 @@
     <b-container>
       <b-form>
         <h1>Login</h1>Email Address*
-        <b-form-input type="email" required class="background"></b-form-input>Password*
-        <b-form-input type="password" required class="background"></b-form-input>
-        <b-button>Login</b-button>
+        <b-form-input type="email" required class="back"></b-form-input>Password*
+        <b-form-input type="password" required class="back"></b-form-input>
+        <b-button v-on:click="login">Login</b-button>
       </b-form>
       <center>
-        <a v-bind:href="hreflink">Forgot Password? Reset it!</a>
+        <a @click="forgotPass">Forgot Password? Reset it!</a>
       </center>
       <center>
-        <a href="#">No Account yet? Register now!</a>
+        <a @click="register">No Account yet? Register now!</a>
       </center>
     </b-container>
   </div>
@@ -20,6 +20,17 @@
 <script>
 export default {
   name: "Login",
+  methods: {
+    forgotPass: function() {
+      this.$router.push("/forgot");
+    },
+    register: function() {
+      this.$router.push("/registration");
+    },
+    login: function() {
+      this.$router.push("/calender");
+    }
+  }
 };
 </script>
 
@@ -27,7 +38,7 @@ export default {
 body {
   background-color: whitesmoke !important;
 }
-.background {
+.back {
   background-color: #ffffb3 !important;
   border: none !important;
   border-bottom: 2px solid #ced4da !important;
@@ -46,6 +57,7 @@ button {
 }
 a {
   text-decoration: underline !important;
+  color: #007bff !important;
 }
 p {
   margin-top: 2% !important;

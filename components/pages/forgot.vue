@@ -4,7 +4,7 @@
       <b-form>
         Email Address*
         <b-form-input type="email" required class="background"></b-form-input>
-        <b-button>Reset Password</b-button>
+        <b-button @click="reset">Reset Password</b-button>
       </b-form>
     </b-container>
   </div>
@@ -12,7 +12,12 @@
 
 <script>
 export default {
-  name: "Forgot"
+  name: "Forgot",
+  methods:{
+    reset: function(){
+      this.$router.push("/");
+    }
+  }
 };
 </script>
 

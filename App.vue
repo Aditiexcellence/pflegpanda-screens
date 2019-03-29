@@ -1,18 +1,14 @@
 <template>
   <div id="app">
-    <Signalment/>
+    <!-- <Login/> -->
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Signalment from './components/signalment.vue'
-
 export default {
-  name: 'app',
-  components: {
-    Signalment
-  }
-}
+  name: "app"
+};
 </script>
 
 <style>
