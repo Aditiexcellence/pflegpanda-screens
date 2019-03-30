@@ -5,43 +5,45 @@
         <h1>Signalment</h1>
         <b-row>
           <b-col lg="12">
-            Facilities
-            <select class="background"></select>
+            <select class="mdb-select md-form background">
+              <option value disabled selected>Facilities</option>
+            </select>
           </b-col>
         </b-row>
         <b-row>
           <b-col lg="12">
-            Additional Qualifications
-            <select class="background"></select>
+            <select class="mdb-select md-form background">
+              <option value disabled selected>Additional Qualifications</option>
+            </select>
           </b-col>
         </b-row>
         <b-row>
           <b-col lg="6">
-            Location
-            <b-form-input type="text" required class="background"></b-form-input>
+            <mdb-input type="text" label="Location" required/>
           </b-col>
           <b-col lg="6">
-            Distance of work
-            <b-form-input type="text" required class="background"></b-form-input>
+            <mdb-input type="text" label="Distance of work" required/>
           </b-col>
         </b-row>
         <b-row>
           <b-col lg="12">
-            Working Shifts
-            <select class="background"></select>
+            <select class="mdb-select md-form background">
+              <option value disabled selected>Working Shifts</option>
+            </select>
           </b-col>
         </b-row>
         <b-row>
           <b-col lg="12">
-            Remission of Pension Charges
-            <select class="background"></select>
+            <select class="mdb-select md-form background">
+              <option value disabled selected>Remission of Pension Charges</option>
+            </select>
           </b-col>
         </b-row>
         <b-row>
           <b-col lg="6">Driving License</b-col>
           <b-col lg="6">
             <label class="switch">
-              <input type="checkbox" checked>
+              <input type="checkbox" checked class="checked">
               <span class="slider round"></span>
             </label>
           </b-col>
@@ -51,21 +53,30 @@
           <b-col lg="6">Own Car</b-col>
           <b-col lg="6">
             <label class="switch">
-              <input type="checkbox" checked>
+              <input type="checkbox" checked class="checked">
               <span class="slider round"></span>
             </label>
           </b-col>
         </b-row>
         <hr>
-        <b-button>Save</b-button>
+        <b-button v-on:click="save">Save</b-button>
       </b-form>
     </b-container>
   </div>
 </template>
 
 <script>
+import { mdbInput } from "mdbvue";
 export default {
-  name: "Signalment"
+  name: "Signalment",
+  components: {
+    mdbInput
+  },
+  methods: {
+    save: function() {
+      this.$router.push("/profile");
+    }
+  }
 };
 </script>
 
@@ -74,9 +85,8 @@ body {
   background-color: whitesmoke !important;
 }
 .background {
-  border: none !important;
-  border-bottom: 2px solid #ced4da !important;
-  border-radius: 0 !important;
+  width: 100%;
+  background-color: white;
 }
 button {
   width: 100% !important;
@@ -99,8 +109,9 @@ button {
   width: 60px;
   height: 34px;
 }
-
-
+.checked {
+  display: none;
+}
 .slider {
   position: absolute;
   cursor: pointer;
@@ -109,8 +120,8 @@ button {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -121,12 +132,12 @@ button {
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
 
 input:checked + .slider:before {

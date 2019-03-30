@@ -9,12 +9,14 @@
         </p>
         <b-row>
           <b-col lg="6">
-            Professional Since
-            <select class="background"></select>
+            <select class="mdb-select md-form background">
+              <option value disabled selected>Professional Since</option>
+            </select>
           </b-col>
           <b-col lg="6">
-            Freelancer Since
-            <select class="background"></select>
+            <select class="mdb-select md-form background">
+              <option value disabled selected>Freelancer Since</option>
+            </select>
           </b-col>
         </b-row>
 
@@ -23,35 +25,28 @@
           employement history here
         </p>
         <center>
-          <a
-            class="atag"
-            data-toggle="collapse"
-            href="#collapseExample"
-            role="button"
-            aria-expanded="true"
-            aria-controls="collapseExample"
-          >Add additional employer</a>
+          <a class="atag" @click="showForm">Add additional employer</a>
         </center>
-        <div class="collapse" id="collapseExample">
-              <b-row>
-                Name of my Employer*
-                <b-form-input type="text" required class="background"></b-form-input>
-              </b-row>
-              <b-row>
-                <b-col lg="4">
-                  City
-                  <b-form-input type="text" required class="background"></b-form-input>
-                </b-col>
-                <b-col lg="4">
-                  From
-                  <select class="background"></select>
-                </b-col>
-                <b-col lg="4">
-                  Till
-                  <select class="background"></select>
-                </b-col>
-              </b-row>
-        </div>
+        <b-form class="formdesign" v-if="canShowform">
+          <b-row class="backgrounddesign">
+            <mdb-input type="text" label="Name of my Employer*"/>
+          </b-row>
+          <b-row class="backgrounddesign">
+            <b-col lg="4">
+              <mdb-input type="text" label="City" class="city"/>
+            </b-col>
+            <b-col lg="4">
+              <select class="mdb-select md-form backgrounds">
+                <option value disabled selected>From</option>
+              </select>
+            </b-col>
+            <b-col lg="4">
+              <select class="mdb-select md-form backgrounds">
+                <option value disabled selected>Till</option>
+              </select>
+            </b-col>
+          </b-row>
+        </b-form>
         <b-button @click="save">Save</b-button>
       </b-form>
     </b-container>
@@ -59,11 +54,23 @@
 </template>
 
 <script>
+import { mdbInput } from "mdbvue";
 export default {
   name: "Registration",
+  components: {
+    mdbInput
+  },
+  data: function() {
+    return {
+      canShowform: false
+    };
+  },
   methods: {
     save: function() {
       this.$router.push("/profile");
+    },
+    showForm: function() {
+      this.canShowform = !this.canShowform;
     }
   }
 };
@@ -73,10 +80,11 @@ export default {
 body {
   background-color: whitesmoke !important;
 }
-.background {
-  border: none !important;
-  border-bottom: 2px solid #ced4da !important;
-  border-radius: 0 !important;
+.backgrounds {
+  width: 100%;
+  background-color: whitesmoke !important;
+  border:none;
+  border-bottom: 1px solid lightgrey;
 }
 button {
   width: 100% !important;
@@ -92,5 +100,22 @@ button {
 }
 .row {
   margin-top: 7%;
+}
+.collapse {
+  display: block;
+}
+.formdesign {
+  border: 1px solid;
+  padding: 4%;
+  background-color: whitesmoke;
+}
+.backgrounddesign{
+background-color: whitesmoke !important;
+} 
+.md-form{
+  width: 100%
+}
+.city{
+  margin-top: 6%;
 }
 </style>

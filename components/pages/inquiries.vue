@@ -2,20 +2,24 @@
   <div>
     <b-nav class="row">
       <b-nav-item @click="calender">
-        <i class="fas fa-calendar-day"></i>
-        Calender
+        <center>
+          <i class="fas fa-calendar-day"></i>
+        </center>Calender
       </b-nav-item>
       <b-nav-item @click="inquiry">
-        <i class="fas fa-envelope-open-text"></i>
-        Inquiries
+        <center>
+          <i class="fas fa-envelope-open-text"></i>
+        </center>Inquiries
       </b-nav-item>
       <b-nav-item @click="invoice">
-        <i class="fas fa-signal-3"></i>
-        Invoices
+        <center>
+        <i class="fas fa-signal"></i>
+        </center>Invoices
       </b-nav-item>
       <b-nav-item @click="profile">
-        <i class="fas fa-user"></i>
-        Profile
+        <center>
+          <i class="fas fa-user"></i>
+        </center>Profile
       </b-nav-item>
     </b-nav>
     <b-container>

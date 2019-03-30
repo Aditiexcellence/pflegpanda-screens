@@ -5,28 +5,23 @@
         <h1>Finish Registration</h1>
         <b-row>
           <b-col lg="6">
-            Email Address*
-            <b-form-input type="email" required class="background"></b-form-input>
+            <mdb-input type="email" label="Email Address*" required/>
           </b-col>
           <b-col lg="6">
-            Password*
-            <b-form-input type="password" required class="background"></b-form-input>
+            <mdb-input type="Password" label="Password*"/>
           </b-col>
         </b-row>
         <b-row>
           <b-col lg="6">
-            First Name
-            <b-form-input type="text" required class="background"></b-form-input>
+            <mdb-input type="text" label="Firstname"/>
           </b-col>
           <b-col lg="6">
-            lastname
-            <b-form-input type="text" required class="background"></b-form-input>
+            <mdb-input type="text" label="Lastname"/>
           </b-col>
         </b-row>
         <b-row>
           <b-col lg="6">
-            Mobile Phone Number
-            <b-form-input type="text" required class="background"></b-form-input>
+            <mdb-input type="text" label=" Mobile Phone Number"/>
           </b-col>
         </b-row>
         <p>
@@ -42,8 +37,12 @@
 </template>
 
 <script>
+import { mdbInput } from "mdbvue";
 export default {
   name: "Registration",
+  components: {
+    mdbInput
+  },
   methods: {
     signup: function() {
       this.$router.push("/");
@@ -55,11 +54,6 @@ export default {
 <style>
 body {
   background-color: whitesmoke !important;
-}
-.background {
-  border: none !important;
-  border-bottom: 2px solid #ced4da !important;
-  border-radius: 0 !important;
 }
 button {
   width: 100% !important;

@@ -15,14 +15,19 @@
         ipsum dolor sit amet.
       </p>
       <hr>
-      <b-button>Save</b-button>
+      <b-button v-on:click="save">Save</b-button>
     </b-container>
   </div>
 </template>
 
 <script>
 export default {
-  name: "About"
+  name: "About",
+  methods: {
+    save: function() {
+      this.$router.push("/profile");
+    }
+  }
 };
 </script>
 

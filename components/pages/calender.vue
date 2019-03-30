@@ -2,20 +2,24 @@
   <div>
     <b-nav class="row">
       <b-nav-item href="#">
-        <i class="fas fa-calendar-day"></i>
-        Calender
+        <center>
+          <i class="fas fa-calendar-day"></i>
+        </center>Calender
       </b-nav-item>
       <b-nav-item @click="inquiry">
-        <i class="fas fa-envelope-open-text"></i>
-        Inquiries
+        <center>
+          <i class="fas fa-envelope-open-text"></i>
+        </center>Inquiries
       </b-nav-item>
       <b-nav-item @click="invoice">
-        <i class="fas fa-signal-3"></i>
-        Invoices
+        <center>
+          <i class="fas fa-signal"></i>
+        </center>Invoices
       </b-nav-item>
       <b-nav-item @click="profile">
-        <i class="fas fa-user"></i>
-        Profile
+        <center>
+          <i class="fas fa-user"></i>
+        </center>Profile
       </b-nav-item>
     </b-nav>
     <b-container>
@@ -25,15 +29,62 @@
         dir Auftrage vermitteln. Klicke dazu auf das ,,Plus-Zeichen" an einem
         Tag!
       </p>
-      <h1>February</h1>
+      <b-row>
+        <b-col lg="11">
+          <h1>February</h1>
+        </b-col>
+        <b-col lg="1" class="set">
+          <i class="fas fa-angle-up"></i>
+        </b-col>
+      </b-row>
       <hr>
-      <b-row>14 Available</b-row>
+      <b-row>
+        <b-col lg="1">
+          14
+          mo
+        </b-col>
+        <b-col lg="3" class="set">Available</b-col>
+        <b-col lg="7"></b-col>
+        <b-col lg="1">
+          <i class="fas fa-plus"></i>
+        </b-col>
+      </b-row>
       <hr>
-      <b-row>15 Available</b-row>
+      <b-row>
+        <b-col lg="1">
+          15
+          mo
+        </b-col>
+        <b-col lg="3" class="set">Available</b-col>
+        <b-col lg="7"></b-col>
+        <b-col lg="1">
+          <i class="fas fa-plus"></i>
+        </b-col>
+      </b-row>
       <hr>
-      <b-row>16 Available</b-row>
+      <b-row>
+        <b-col lg="1">
+          16
+          mo
+        </b-col>
+        <b-col lg="3" class="set">Available</b-col>
+        <b-col lg="7"></b-col>
+        <b-col lg="1">
+          <i class="fas fa-plus"></i>
+        </b-col>
+      </b-row>
       <hr>
-      <b-row>17 Available</b-row>
+      <b-row>
+        <b-col lg="1">
+          17
+          mo
+        </b-col>
+        <b-col lg="3" class="set">Available</b-col>
+        <b-col lg="7"></b-col>
+        <b-col lg="1">
+          <i class="fas fa-plus"></i>
+        </b-col>
+      </b-row>
     </b-container>
   </div>
 </template>
@@ -79,5 +130,9 @@ body {
 }
 .paragraph {
   background-color: #00e6e6;
+}
+.set {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 </style>

@@ -1,12 +1,12 @@
 <template>
   <div>
     <b-container>
-      <b-form>
-        <h1>Login</h1>Email Address*
-        <b-form-input type="email" required class="back"></b-form-input>Password*
-        <b-form-input type="password" required class="back"></b-form-input>
+      <form>
+        <h1>Login</h1>
+        <mdb-input type="email" label="Email Address*" required/>
+        <mdb-input type="Password" label="Password*"/>
         <b-button v-on:click="login">Login</b-button>
-      </b-form>
+      </form>
       <center>
         <a @click="forgotPass">Forgot Password? Reset it!</a>
       </center>
@@ -18,8 +18,12 @@
 </template>
 
 <script>
+import { mdbInput } from "mdbvue";
 export default {
   name: "Login",
+  components: {
+    mdbInput
+  },
   methods: {
     forgotPass: function() {
       this.$router.push("/forgot");
@@ -38,16 +42,8 @@ export default {
 body {
   background-color: whitesmoke !important;
 }
-.back {
-  background-color: #ffffb3 !important;
-  border: none !important;
-  border-bottom: 2px solid #ced4da !important;
-  border-radius: 0 !important;
-}
-button {
-  width: 100% !important;
+.btn-secondary {
   background-color: #00e6e6 !important;
-  margin-top: 2% !important;
 }
 .container {
   width: 50% !important;
