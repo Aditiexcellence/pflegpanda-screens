@@ -8,10 +8,10 @@
         <b-button v-on:click="login">Login</b-button>
       </form>
       <center>
-        <a @click="forgotPass">Forgot Password? Reset it!</a>
+        <a @click="forgotPass" class="got">Forgot Password? Reset it!</a>
       </center>
       <center>
-        <a @click="register">No Account yet? Register now!</a>
+        <a @click="register" class="not">No Account yet? Register now!</a>
       </center>
     </b-container>
   </div>
@@ -61,9 +61,15 @@ body {
 .login {
   padding: 4% !important;
 }
-a {
+.got {
   text-decoration: underline !important;
-  color: #007bff !important;
+  color: black !important;
+  text-decoration-color: blue !important;
+}
+.not {
+  text-decoration: underline !important;
+  color: black !important;
+  text-decoration-color: #990099 !important;
 }
 p {
   margin-top: 2% !important;

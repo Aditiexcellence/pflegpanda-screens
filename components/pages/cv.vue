@@ -29,7 +29,12 @@
         </center>
         <b-form class="formdesign" v-if="canShowform">
           <b-row class="backgrounddesign">
-            <mdb-input type="text" label="Name of my Employer*"/>
+            <b-col lg="11">
+              <mdb-input type="text" label="Name of my Employer*"/>
+            </b-col>
+            <b-col lg="1">
+              <i class="far fa-times-circle"></i>
+            </b-col>
           </b-row>
           <b-row class="backgrounddesign">
             <b-col lg="4">
@@ -85,6 +90,7 @@ body {
   background-color: whitesmoke !important;
   border: none;
   border-bottom: 1px solid lightgrey;
+  color: gray;
 }
 button {
   width: 100% !important;
@@ -107,7 +113,7 @@ button {
   display: block;
 }
 .formdesign {
-  border: 1px solid;
+  border: 1px solid lightgrey;
   padding: 4%;
   background-color: whitesmoke;
 }

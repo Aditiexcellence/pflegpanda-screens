@@ -38,7 +38,18 @@
       <b-col lg="4"></b-col>
     </b-nav>
     <b-container class="profilepadding">
-      <h1 class="heading">asd asd</h1>
+      <b-row>
+        <b-col lg="10">
+          <h1 class="heading">asd asd</h1>
+        </b-col>
+        <b-col lg="2">
+          <div class="icon">
+            <center>
+              <i class="fas fa-image"></i>
+            </center>
+          </div>
+        </b-col>
+      </b-row>
       <b-row>My Website</b-row>
       <hr>
       <b-row>
@@ -125,5 +136,12 @@ body {
 }
 .heading {
   margin-bottom: 8%;
+}
+.icon {
+  background-color: grey !important;
+  border-radius: 43% !important;
+  padding: 7%;
+  padding-top: 10%;
+  padding-bottom: 10%;
 }
 </style>

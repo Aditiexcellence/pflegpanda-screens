@@ -6,14 +6,14 @@
         <b-row>
           <b-col lg="12">
             <select class="mdb-select md-form background">
-              <option value disabled selected>Facilities</option>
+              <option value disabled selected >Facilities</option>
             </select>
           </b-col>
         </b-row>
         <b-row>
           <b-col lg="12">
             <select class="mdb-select md-form background">
-              <option value disabled selected>Additional Qualifications</option>
+              <option value disabled selected >Additional Qualifications</option>
             </select>
           </b-col>
         </b-row>
@@ -28,20 +28,20 @@
         <b-row>
           <b-col lg="12">
             <select class="mdb-select md-form background">
-              <option value disabled selected>Working Shifts</option>
+              <option value disabled selected >Working Shifts</option>
             </select>
           </b-col>
         </b-row>
         <b-row>
           <b-col lg="12">
             <select class="mdb-select md-form background">
-              <option value disabled selected>Remission of Pension Charges</option>
+              <option value disabled selected >Remission of Pension Charges</option>
             </select>
           </b-col>
         </b-row>
         <b-row>
-          <b-col lg="6" class="set">Driving License</b-col>
-          <b-col lg="6" class="set">
+          <b-col lg="6" class="sets">Driving License</b-col>
+          <b-col lg="6" class="sets">
             <center>
               <label class="switch">
                 <input type="checkbox" checked class="checked">
@@ -52,8 +52,8 @@
         </b-row>
         <hr class="hrwidth">
         <b-row>
-          <b-col lg="6" class="set">Own Car</b-col>
-          <b-col lg="6" class="set">
+          <b-col lg="6" class="sets">Own Car</b-col>
+          <b-col lg="6" class="sets">
             <center>
               <label class="switch">
                 <input type="checkbox" checked class="checked">
@@ -91,6 +91,7 @@ body {
 .background {
   width: 100%;
   background-color: white;
+  color: gray !important;
 }
 button {
   width: 100% !important;
@@ -129,7 +130,10 @@ button {
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-
+.sets {
+  margin-top: auto;
+  margin-bottom: auto;
+}
 .slider:before {
   position: absolute;
   content: "";

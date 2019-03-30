@@ -151,6 +151,7 @@ body {
 .set {
   margin-top: auto;
   margin-bottom: auto;
+  color: grey;
 }
 .nav-link {
   color: grey !important;
