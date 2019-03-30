@@ -1,10 +1,10 @@
 <template>
   <div>
-    <b-container>
+    <b-container class="login">
       <form>
         <h1>Login</h1>
-        <mdb-input type="email" label="Email Address*" required/>
-        <mdb-input type="Password" label="Password*"/>
+        <mdb-input type="email" label="E-mail Address*" required v-model="email"/>
+        <mdb-input type="Password" label="Password*" v-model="password"/>
         <b-button v-on:click="login">Login</b-button>
       </form>
       <center>
@@ -21,6 +21,12 @@
 import { mdbInput } from "mdbvue";
 export default {
   name: "Login",
+  data: function() {
+    return {
+      email: "",
+      password: ""
+    };
+  },
   components: {
     mdbInput
   },
@@ -32,7 +38,9 @@ export default {
       this.$router.push("/registration");
     },
     login: function() {
-      this.$router.push("/calender");
+      if (this.email != "" && this.password != "") {
+        this.$router.push("/calender");
+      }
     }
   }
 };
@@ -49,6 +57,8 @@ body {
   width: 50% !important;
   margin-top: 10%;
   background-color: white !important;
+}
+.login {
   padding: 4% !important;
 }
 a {

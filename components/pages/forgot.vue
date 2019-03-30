@@ -1,9 +1,8 @@
 <template>
   <div>
-    <b-container>
+    <b-container class="forgot">
       <b-form>
-        Email Address*
-        <b-form-input type="email" required class="background"></b-form-input>
+        <mdb-input type="email" label="E-mail Address*" required/>
         <b-button @click="reset">Reset Password</b-button>
       </b-form>
     </b-container>
@@ -11,10 +10,14 @@
 </template>
 
 <script>
+import { mdbInput } from "mdbvue";
 export default {
   name: "Forgot",
-  methods:{
-    reset: function(){
+  components: {
+    mdbInput
+  },
+  methods: {
+    reset: function() {
       this.$router.push("/");
     }
   }
@@ -39,6 +42,8 @@ button {
   width: 50% !important;
   margin-top: 10%;
   background-color: white !important;
+}
+.forgot {
   padding: 4% !important;
 }
 </style>

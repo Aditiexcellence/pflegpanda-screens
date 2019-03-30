@@ -1,9 +1,9 @@
 <template>
   <div>
-    <b-container>
+    <b-container class="about">
       <h1>About Me</h1>
       <p>
-        Tell eventhing about yourself that potential client should
+        Tell everything about yourself that potential client should
         know about you!
       </p>
       <p class="design">
@@ -14,7 +14,7 @@
         clita kasd gubergren, no sea takimata sanctus est Lorem
         ipsum dolor sit amet.
       </p>
-      <hr>
+      <hr class="hrset">
       <b-button v-on:click="save">Save</b-button>
     </b-container>
   </div>
@@ -39,7 +39,9 @@ body {
   width: 50% !important;
   margin-top: 10%;
   background-color: white !important;
-  padding: 4% !important;
+}
+.about {
+  padding: 6% !important;
 }
 p {
   margin-top: 3% !important;
@@ -55,5 +57,8 @@ button {
 }
 hr {
   border: 1px solid lightgray !important;
+}
+.hrset {
+  margin-top: 3rem;
 }
 </style>

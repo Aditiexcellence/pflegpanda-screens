@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-container>
+    <b-container class="single">
       <b-form>
         <h1>Signalment</h1>
         <b-row>
@@ -40,25 +40,29 @@
           </b-col>
         </b-row>
         <b-row>
-          <b-col lg="6">Driving License</b-col>
-          <b-col lg="6">
-            <label class="switch">
-              <input type="checkbox" checked class="checked">
-              <span class="slider round"></span>
-            </label>
+          <b-col lg="6" class="set">Driving License</b-col>
+          <b-col lg="6" class="set">
+            <center>
+              <label class="switch">
+                <input type="checkbox" checked class="checked">
+                <span class="slider round"></span>
+              </label>
+            </center>
           </b-col>
         </b-row>
-        <hr>
+        <hr class="hrwidth">
         <b-row>
-          <b-col lg="6">Own Car</b-col>
-          <b-col lg="6">
-            <label class="switch">
-              <input type="checkbox" checked class="checked">
-              <span class="slider round"></span>
-            </label>
+          <b-col lg="6" class="set">Own Car</b-col>
+          <b-col lg="6" class="set">
+            <center>
+              <label class="switch">
+                <input type="checkbox" checked class="checked">
+                <span class="slider round"></span>
+              </label>
+            </center>
           </b-col>
         </b-row>
-        <hr>
+        <hr class="hrwidth">
         <b-button v-on:click="save">Save</b-button>
       </b-form>
     </b-container>
@@ -98,6 +102,8 @@ button {
   width: 50% !important;
   margin-top: 4%;
   background-color: white !important;
+}
+.single {
   padding: 3% !important;
 }
 .row {
@@ -107,7 +113,7 @@ button {
   position: relative;
   display: inline-block;
   width: 60px;
-  height: 34px;
+  height: 25px;
 }
 .checked {
   display: none;
@@ -127,10 +133,10 @@ button {
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
+  height: 21px;
   width: 26px;
-  left: 4px;
-  bottom: 4px;
+  left: 6px;
+  bottom: 2px;
   background-color: white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -151,5 +157,9 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+.hrwidth {
+  margin-left: 2%;
+  margin-right: 2%;
 }
 </style>

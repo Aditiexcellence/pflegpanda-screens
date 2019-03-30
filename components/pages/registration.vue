@@ -1,11 +1,11 @@
 <template>
   <div>
-    <b-container>
+    <b-container class="register">
       <b-form>
         <h1>Finish Registration</h1>
         <b-row>
           <b-col lg="6">
-            <mdb-input type="email" label="Email Address*" required/>
+            <mdb-input type="email" label="E-mail Address*" required/>
           </b-col>
           <b-col lg="6">
             <mdb-input type="Password" label="Password*"/>
@@ -65,6 +65,8 @@ button {
   width: 50% !important;
   margin-top: 4%;
   background-color: white !important;
+}
+.register {
   padding: 3% !important;
 }
 .row {

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-container>
+    <b-container class="cv">
       <b-form>
         <h1>My CV</h1>
         <p>
@@ -83,7 +83,7 @@ body {
 .backgrounds {
   width: 100%;
   background-color: whitesmoke !important;
-  border:none;
+  border: none;
   border-bottom: 1px solid lightgrey;
 }
 button {
@@ -96,6 +96,8 @@ button {
   width: 50% !important;
   margin-top: 4%;
   background-color: white !important;
+}
+.cv {
   padding: 3% !important;
 }
 .row {
@@ -109,13 +111,13 @@ button {
   padding: 4%;
   background-color: whitesmoke;
 }
-.backgrounddesign{
-background-color: whitesmoke !important;
-} 
-.md-form{
-  width: 100%
+.backgrounddesign {
+  background-color: whitesmoke !important;
 }
-.city{
+.md-form {
+  width: 100%;
+}
+.city {
   margin-top: 6%;
 }
 </style>

@@ -1,29 +1,44 @@
 <template>
   <div>
     <b-nav class="row">
-      <b-nav-item @click="calender">
-        <center>
-          <i class="fas fa-calendar-day"></i>
-        </center>Calender
-      </b-nav-item>
-      <b-nav-item @click="inquiry">
-        <center>
-          <i class="fas fa-envelope-open-text"></i>
-        </center>Inquiries
-      </b-nav-item>
-      <b-nav-item @click="invoice">
-        <center>
-       <i class="fas fa-signal"></i>
-        </center>Invoices
-      </b-nav-item>
-      <b-nav-item @click="profile">
-        <center>
-          <i class="fas fa-user"></i>
-        </center>Profile
-      </b-nav-item>
+      <b-col lg="2">
+        <b-nav-item @click="calender">
+          <center>
+            <i class="fas fa-calendar-day"></i>
+          </center>
+          <center>Calender</center>
+        </b-nav-item>
+      </b-col>
+      <b-col lg="2">
+        <b-nav-item @click="inquiry">
+          <center>
+            <i class="fas fa-envelope-open-text"></i>
+          </center>
+          <center>Inquiries</center>
+        </b-nav-item>
+      </b-col>
+      <b-col lg="2">
+        <b-nav-item @click="invoice">
+          <center>
+            <i class="fas fa-signal"></i>
+          </center>
+          <center>Invoices</center>
+        </b-nav-item>
+      </b-col>
+      <b-col lg="2">
+        <b-nav-item @click="profile" class="actives">
+          <a target="_self" href="#" class="nav-linkactive">
+            <center>
+              <i class="fas fa-user"></i>
+            </center>
+            <center>Profile</center>
+          </a>
+        </b-nav-item>
+      </b-col>
+      <b-col lg="4"></b-col>
     </b-nav>
-    <b-container>
-      <h1>asd asd</h1>
+    <b-container class="profilepadding">
+      <h1 class="heading">asd asd</h1>
       <b-row>My Website</b-row>
       <hr>
       <b-row>
@@ -86,16 +101,29 @@ body {
   width: 50% !important;
   margin-top: 4%;
   background-color: white !important;
-  padding: 3% !important;
 }
 .h1 {
   margin-bottom: 6% !important;
 }
-.row {
-  margin-top: 7%;
-}
 .atag {
   text-decoration: none !important;
   color: black !important;
+}
+.nav-link {
+  color: grey !important;
+  text-decoration: none !important;
+}
+.nav-linkactive {
+  color: #00e6e6 !important;
+  text-decoration: none !important;
+}
+.actives {
+  border-bottom: 2px solid #00e6e6;
+}
+.profilepadding {
+  padding: 5% !important;
+}
+.heading {
+  margin-bottom: 8%;
 }
 </style>
